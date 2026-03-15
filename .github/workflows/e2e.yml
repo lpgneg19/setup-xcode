@@ -37,7 +37,7 @@ jobs:
     strategy:
       matrix:
         # https://github.com/actions/runner-images/blob/main/images/macos/macos-26-arm64-Readme.md#xcode
-        xcode-version: ['26.0.1', '26.1.1', '26.2', '26.3', '26.4', latest, latest-stable]
+        xcode-version: ['26.0.1', '26.1.1', '26.2', '26.3', '26.4-beta', latest, latest-stable]
       fail-fast: false
     steps:
       - name: Checkout
