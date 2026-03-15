@@ -24,7 +24,7 @@ jobs:
     runs-on: macos-latest
     steps:
     - uses: actions/checkout@v6
-    - uses: lpgneg19/setup-xcode@v2 # Replace with your version/branch
+    - uses: lpgneg19/setup-xcode@v2
       with:
         xcode-version: latest-stable
 ```
