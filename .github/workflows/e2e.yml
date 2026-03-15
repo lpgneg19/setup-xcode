@@ -9,6 +9,28 @@ on:
   workflow_dispatch:
 
 jobs:
+  versions-macOS-14:
+    name: macOS 14
+    runs-on: macos-14
+    strategy:
+      matrix:
+        # https://github.com/actions/runner-images/blob/main/images/macos/macos-14-Readme.md#xcode
+        xcode-version: ['15.0.1', '15.1', '15.2', '15.3', '15.4', '16.1', '16.2', latest, latest-stable]
+      fail-fast: false
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - uses: ./
+        name: Setup Xcode
+        id: setup-xcode
+        with:
+          xcode-version: ${{ matrix.xcode-version }}
+      - name: Print output variables
+        run: |
+          echo "Version: ${{ steps.setup-xcode.outputs.version }}"
+          echo "Path: ${{ steps.setup-xcode.outputs.path }}"
+
   versions-macOS-26:
     name: macOS 26
     runs-on: macos-26
