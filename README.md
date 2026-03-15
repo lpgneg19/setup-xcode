@@ -24,7 +24,7 @@ jobs:
     runs-on: macos-latest
     steps:
     - uses: actions/checkout@v6
-    - uses: lpgneg19/setup-xcode@v1 # Replace with your version/branch
+    - uses: lpgneg19/setup-xcode@v2 # Replace with your version/branch
       with:
         xcode-version: latest-stable
 ```
@@ -36,7 +36,7 @@ jobs:
     runs-on: macos-15
     steps:
     - uses: actions/checkout@v6
-    - uses: lpgneg19/setup-xcode@v1
+    - uses: lpgneg19/setup-xcode@v2
       with:
         xcode-version: '16.1'
 ```
@@ -48,7 +48,7 @@ jobs:
     runs-on: macos-26
     steps:
     - uses: actions/checkout@v6
-    - uses: lpgneg19/setup-xcode@v1
+    - uses: lpgneg19/setup-xcode@v2
       with:
         xcode-version: '26.4-beta'
 ```
