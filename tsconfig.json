@@ -15,7 +15,8 @@
       /* Additional Checks */
       "noUnusedLocals": true,
       "noUnusedParameters": true,
-      "noImplicitReturns": true
+      "noImplicitReturns": true,
+      "types": ["node", "jest", "semver", "plist"]
     },
     "include": ["./src/**/*.ts"],
     "exclude": ["node_modules", "./__tests__/**/*.ts"]
