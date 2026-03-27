@@ -1,8 +1,8 @@
 name: Validate 'setup-xcode'
-于:
+on:
   push:
-    分支:
-      - master
+    branches:
+      - main
   pull_request:
   schedule:
     - cron: 0 0 * * *
